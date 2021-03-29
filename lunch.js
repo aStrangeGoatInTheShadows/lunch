@@ -14,7 +14,18 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  if(!hungry) {
+    console.log("Only weak people stop working and eat.");
+    return false;
+  }
+
+  if (availableTime < 20) {
+    console.log("A packet of ketchup is lunch right? You can eat that in the lab and talk to classmates!");
+  } else if (availableTime >= 20 && availableTime <= 30) {
+    console.log("We could try out a place in Gastown but you could also eat more ramen");
+  } else {
+    console.log("If you've got that much free time you should invest it in your career development");
+  }
 }
 
 
